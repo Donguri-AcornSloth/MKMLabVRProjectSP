@@ -15,9 +15,9 @@ public class GunManagerR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
         {
-            Instantiate(bullet, transform.position + transform.forward, transform.rotation);
+            Instantiate(bullet, transform.position + transform.forward / 2, transform.rotation);
         }
     }
 }
