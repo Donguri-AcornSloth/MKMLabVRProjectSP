@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CartManager : MonoBehaviour
 {
+    private Vector2 stickL = new Vector2();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,7 @@ public class CartManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        stickL = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
+        this.transform.Rotate(0.0f,stickL.x, 0.0f);
     }
 }

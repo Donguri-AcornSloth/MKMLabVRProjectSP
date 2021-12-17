@@ -18,13 +18,13 @@ public class TargetManager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             // TargetとBulletを両方消去
             Destroy(gameObject);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
 
             // 得点を追加
             scoreManager.AddScore();
