@@ -7,12 +7,13 @@ public class BulletMove : MonoBehaviour
     public float deleteTime;
 
     private Rigidbody rb;
-    private float speed;
+    public float speed;
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        speed = 5.0f;
+        //speed = 5.0f;
 
         // 指定時間後に消去
         Destroy(gameObject, deleteTime);
