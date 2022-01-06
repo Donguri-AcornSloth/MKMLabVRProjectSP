@@ -43965,6 +43965,7 @@ GameObject:
   - component: {fileID: 2127788068}
   - component: {fileID: 2127788067}
   - component: {fileID: 2127788066}
+  - component: {fileID: 2127788070}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -44046,6 +44047,24 @@ Transform:
   m_Father: {fileID: 45093060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127788070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127788065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589ec4bd4e8fccc4e8ac4f04792ccd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  TriggerCounter: 0
+  SE: {fileID: 0}
+  Audio: {fileID: 0}
+  Particle: {fileID: 2870866904219924609, guid: 9441425092f1912489081f5fe3ee7e30,
+    type: 3}
 --- !u!4 &2131241443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2332895563961286791, guid: d36ee512899121c4aa4782e0b9d7e5df,
@@ -44750,7 +44769,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2227328898792228747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
