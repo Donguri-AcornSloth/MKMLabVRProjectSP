@@ -19,6 +19,7 @@ public class TargetManager : MonoBehaviour
     {
         //当たった回数の初期値設定
         TriggerCounter = 0;
+        Audio = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +44,9 @@ public class TargetManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject newParticle1;
+        GameObject newParticle2;
+
         if (other.gameObject.CompareTag("Bullet"))
         {
             //当たったオブジェクトの情報を取得
@@ -52,12 +56,16 @@ public class TargetManager : MonoBehaviour
             //当たり判定とレンダラーを無効化
             this.gameObject.GetComponent<Collider>().enabled = false;
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            otherObj.GetComponent<Collider>().enabled = false;
+            otherObj.GetComponent<Collider>().enabled = false;
 
             //音・パーティクルを再生
             Audio.PlayOneShot(SE);
-            Instantiate(Particle1.gameObject,);
-            Particle1.Play();
 
+            newParticle1 = Instantiate(Particle1.gameObject);
+            newParticle1.GetComponent<ParticleSystem>().Play();
+            newParticle2 = Instantiate(Particle1.gameObject);
+            newParticle2.GetComponent<ParticleSystem>().Play();
 
             // TargetとBulletを両方消去
             /*Destroy(gameObject);
