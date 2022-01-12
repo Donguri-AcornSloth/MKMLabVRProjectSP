@@ -19,7 +19,7 @@ public class GunManagerL : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
         {
-            Instantiate(bullet, transform.position + transform.forward / 2, transform.rotation);
+            Instantiate(bullet, transform.position , transform.rotation);//+transform.forward / 2, transform.rotation);
             Audio.PlayOneShot(audioClip);
         }
         //テスト用
