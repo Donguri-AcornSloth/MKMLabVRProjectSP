@@ -26,7 +26,7 @@ public class DollySpeedManager : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            Debug.Log(script.m_Speed);
+            //Debug.Log(script.m_Speed);
             script.m_Speed = triggerSpeed;
         }
     }

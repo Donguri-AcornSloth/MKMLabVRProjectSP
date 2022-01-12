@@ -22,6 +22,6 @@ public class BulletMove : MonoBehaviour
     void Update()
     {
         // 正面に発射
-        rb.velocity = transform.forward * speed;
+        rb.velocity = -transform.up * speed;
     }
 }

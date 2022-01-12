@@ -20,7 +20,7 @@ public class CartManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(stickL.x);
+       // Debug.Log(stickL.x);
         stickL = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
 
         if (operation)
