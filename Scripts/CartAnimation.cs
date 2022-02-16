@@ -33,5 +33,13 @@ public class CartAnimation : MonoBehaviour
             //Debug.Log(script.m_Speed);
             anim.SetBool("shakeBool", false);
         }
+
+        if (other.gameObject.tag == "rotate")
+        {
+            Debug.Log("a");
+            anim.SetTrigger("rotateTrigger");
+        }
+
+      
     }
 }

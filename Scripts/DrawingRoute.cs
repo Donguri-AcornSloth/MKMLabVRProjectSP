@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class DrawingRoute : MonoBehaviour
 {
-    [SerializeField] CinemachineSmoothPath smoothPath;
+    [SerializeField] CinemachinePath smoothPath;
     [SerializeField] CinemachinePath.PositionUnits units;
     [SerializeField] GameObject cube;
     [SerializeField] uint amount;
