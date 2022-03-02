@@ -6,7 +6,7 @@ public class DollySpeedManager : MonoBehaviour
 {
     public float triggerSpeed;
     GameObject dolly;
-    public Cinemachine.CinemachineDollyCart script;
+    Cinemachine.CinemachineDollyCart script;
 
     void Start()
     {

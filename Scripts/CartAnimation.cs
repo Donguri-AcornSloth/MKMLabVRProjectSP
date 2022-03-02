@@ -21,7 +21,6 @@ public class CartAnimation : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.tag == "shake")
         {
            
