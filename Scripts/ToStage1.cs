@@ -7,6 +7,6 @@ public class ToStage1 : MonoBehaviour
 {
     public void OnClickButton()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage1_Test");
     }
 }
