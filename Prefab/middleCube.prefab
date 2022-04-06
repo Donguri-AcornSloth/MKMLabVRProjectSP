@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ec4bd4e8fccc4e8ac4f04792ccd7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 8010990890897531000, guid: 93100cc011b1e6e439469f184974d91f,
+    type: 3}
   TriggerCounter: 0
   SE: {fileID: 0}
   Audio: {fileID: 0}
