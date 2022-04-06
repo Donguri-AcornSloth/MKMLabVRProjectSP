@@ -28,13 +28,13 @@ public class CameraManager : MonoBehaviour
         if (other.gameObject.CompareTag("TPSTriggerIn"))
         {
             vrCamComp.targetDisplay = 1;
-            mainCamComp.enabled = true;
+            mainCamComp.targetDisplay = 0;
         }
 
         if (other.gameObject.CompareTag("TPSTriggerOut"))
         {
             vrCamComp.targetDisplay = 0;
-            mainCamComp.enabled = false;
+            mainCamComp.targetDisplay = 1;
         }
     }
 }
