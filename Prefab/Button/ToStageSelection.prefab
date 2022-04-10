@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5723fd27ebdd72840854e87c8e145362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ToStageSelectSE: {fileID: 8300000, guid: 3177abf30a775864ba622e7edacdc538, type: 3}
 --- !u!1 &8438642968650744004
 GameObject:
   m_ObjectHideFlags: 0
