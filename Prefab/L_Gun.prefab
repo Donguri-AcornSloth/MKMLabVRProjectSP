@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2850101825137457478}
   - component: {fileID: 2850101825137457479}
   m_Layer: 0
-  m_Name: Right_Gun
+  m_Name: L_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2850101825137457481}
-  m_Mesh: {fileID: -2393093981535085579, guid: 4e5db5782907f724aac35ec3cd331683, type: 3}
+  m_Mesh: {fileID: -1306626966058957946, guid: 0e3c80f4143990041aec3deb94276e45, type: 3}
 --- !u!23 &8172082481050629685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3143c7c303796d844bfdee9693aac82a, type: 2}
+  - {fileID: 2100000, guid: b19f902a9b9db32448d9948ee993333d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
