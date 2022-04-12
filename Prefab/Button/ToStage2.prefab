@@ -225,3 +225,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbd53ca50f01454082969abef191c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ToStage2SE: {fileID: 8300000, guid: 3177abf30a775864ba622e7edacdc538, type: 3}
