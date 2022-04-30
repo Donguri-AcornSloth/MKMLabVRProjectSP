@@ -60,7 +60,10 @@ public class TargetManager : MonoBehaviour
             otherObj.GetComponent<Collider>().enabled = false;
 
             //音・パーティクルを再生
-            Audio.PlayOneShot(SE);
+            if (OnOffSound.isSound)
+            {
+                Audio.PlayOneShot(SE);
+            }
 
             newParticle1 = Instantiate(Particle1.gameObject);
             newParticle1.GetComponent<ParticleSystem>().Play();

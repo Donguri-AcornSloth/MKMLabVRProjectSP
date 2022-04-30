@@ -14,7 +14,16 @@ public class CartManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        var audio = GetComponent<AudioSource>();
+
+        if (OnOffSound.isSound == false)
+        {
+            audio.enabled = false;
+        }
+        else if (OnOffSound.isSound == true)
+        {
+            audio.enabled = true;
+        }
     }
 
     // Update is called once per frame
