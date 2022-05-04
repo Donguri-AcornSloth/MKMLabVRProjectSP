@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ec4bd4e8fccc4e8ac4f04792ccd7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 3980988104314477539, guid: d4b42af85f6074c42ac345b647476c35,
+  scoreManager: {fileID: 8010990890897531000, guid: 93100cc011b1e6e439469f184974d91f,
     type: 3}
   TriggerCounter: 0
   SE: {fileID: 8300000, guid: 142b412a9012c0d48936a3a6c5cab65a, type: 3}
