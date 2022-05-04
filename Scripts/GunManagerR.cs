@@ -21,7 +21,11 @@ public class GunManagerR : MonoBehaviour
         {
             //Instantiate(bullet, transform.position + transform.forward / 2, transform.rotation);
             Instantiate(bullet, transform.position, transform.rotation);
-            Audio.PlayOneShot(audioClip);
+
+            if (OnOffSound.isSound)
+            {
+                Audio.PlayOneShot(audioClip);
+            }
         }
         //テスト用
         if (Input.GetKeyDown(KeyCode.Space))

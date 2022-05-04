@@ -21,13 +21,13 @@ public class CartAnimation : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "shake")
+        if (other.gameObject.tag == "shake" && OnOffShake.isShake == true)
         {
            
             anim.SetBool("shakeBool", true);
         }
 
-        if (other.gameObject.tag == "stopShake")
+        if (other.gameObject.tag == "stopShake" && OnOffShake.isShake == false)
         {
             //Debug.Log(script.m_Speed);
             anim.SetBool("shakeBool", false);
