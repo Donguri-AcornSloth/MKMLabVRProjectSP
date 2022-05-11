@@ -14,6 +14,6 @@ public class OnOffRailUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "Œ»İ‚Ìİ’èF" + OnOffTPS.isTPS;
+        GetComponent<Text>().text = "Œ»İ‚Ìİ’èF" + OnOffRail.isRail;
     }
 }
