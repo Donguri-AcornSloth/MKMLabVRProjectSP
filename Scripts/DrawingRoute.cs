@@ -12,17 +12,20 @@ public class DrawingRoute : MonoBehaviour
 
     void Start()
     {
-        // 例: 3の時にこんな感じに o------o------o 両端になるようにamount-1
-
-        float interval = smoothPath.PathLength / (amount - 1);
-
-        Vector3 position;
-        Quaternion rotation;
-        for (float pos = 0; pos <= smoothPath.PathLength; pos += interval)
+        if (OnOffRail.isRail == true)
         {
-            position = smoothPath.EvaluatePositionAtUnit(pos, units);
-            rotation = smoothPath.EvaluateOrientationAtUnit(pos, units);
-            Instantiate(cube, position, rotation, transform);
+            // 例: 3の時にこんな感じに o------o------o 両端になるようにamount-1
+
+            float interval = smoothPath.PathLength / (amount - 1);
+
+            Vector3 position;
+            Quaternion rotation;
+            for (float pos = 0; pos <= smoothPath.PathLength; pos += interval)
+            {
+                position = smoothPath.EvaluatePositionAtUnit(pos, units);
+                rotation = smoothPath.EvaluateOrientationAtUnit(pos, units);
+                Instantiate(cube, position, rotation, transform);
+            }
         }
     }
 }
