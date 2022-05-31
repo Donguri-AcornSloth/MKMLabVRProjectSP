@@ -21,6 +21,7 @@ public class GunManagerR : MonoBehaviour
         {
             //Instantiate(bullet, transform.position + transform.forward / 2, transform.rotation);
             Instantiate(bullet, transform.position, transform.rotation);
+            LogData.bulletCount++;
 
             if (OnOffSound.isSound)
             {

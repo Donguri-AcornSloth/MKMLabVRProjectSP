@@ -9,6 +9,10 @@ public class ToResult : MonoBehaviour
     public int lapCount;
     public int maxLap = 3;
 
+    // Logo—Í—p•Ï”
+    // score
+    // bulletCount
+
     public void OnClickButton()
     {
         SceneManager.LoadScene("Result");

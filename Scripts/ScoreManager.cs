@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int score = 0;
     public int basicScore = 10;
 
     // Start is called before the first frame update
@@ -17,16 +16,16 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "Score : " + score;
+        GetComponent<Text>().text = "Score : " + LogData.score;
     }
 
     public void AddScore()
     {
-        score += basicScore;
+        LogData.score += basicScore;
     }
 
     public static int getScore()
     {
-        return score;
+        return LogData.score;
     }
 }

@@ -18,6 +18,9 @@ public class ToStageSelect : MonoBehaviour
         //音・パーティクルを再生
         AudioSource.PlayOneShot(ToStageSelectSE);
         SceneManager.LoadScene("StageSelection");
-        ScoreManager.score = 0;
+        LogData.score = 0;
+        LogData.bulletCount = 0;
+        LogData.movement = new Vector3(0, 0, 0);
+        LogData.rotation = new Vector3(0, 0, 0);
     }
 }

@@ -18,6 +18,5 @@ public class ToTitle : MonoBehaviour
         //音・パーティクルを再生
         AudioSource.PlayOneShot(ToTitleSE);
         SceneManager.LoadScene("TitleScene");
-        ScoreManager.score = 0;
     }
 }
