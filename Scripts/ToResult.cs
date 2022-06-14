@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.IO;
 
 public class ToResult : MonoBehaviour
 {
@@ -9,9 +11,20 @@ public class ToResult : MonoBehaviour
     public int lapCount;
     public int maxLap = 3;
 
+    // Log用変数
+    public SaveLog SaveLog;
+    FileInfo fi;
+
     // Log出力用変数
     // score
     // bulletCount
+
+    public void Start()
+    {
+        //DateTime now = DateTime.Now;
+        //fi = new FileInfo(Application.dataPath + "/" + "LogData_" + now.Year.ToString() + "_" + now.Month.ToString() + "_" + now.Day.ToString() + "__" + now.Hour.ToString() + "_" + now.Minute.ToString() + ".csv");
+
+    }
 
     public void OnClickButton()
     {
@@ -25,8 +38,10 @@ public class ToResult : MonoBehaviour
             // 周回数をカウント
             lapCount++;
 
-            if (lapCount >= maxLap)
+            if (lapCount == maxLap)
             {
+                SaveLog.SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
+                SaveLog.CSVClose();
                 SceneManager.LoadScene("Result");
             }
         }
