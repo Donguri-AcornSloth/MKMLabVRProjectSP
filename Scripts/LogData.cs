@@ -21,8 +21,8 @@ public class LogData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement += this.gameObject.transform.position - pmovement;
-        rotation += this.gameObject.transform.rotation.eulerAngles - protation;
+        movement = this.gameObject.transform.position - pmovement;
+        rotation = this.gameObject.transform.rotation.eulerAngles - protation;
 
         pmovement = this.gameObject.transform.position;
         protation = this.gameObject.transform.rotation.eulerAngles;
