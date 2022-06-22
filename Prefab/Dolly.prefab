@@ -523,7 +523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5680673395932953654}
   - component: {fileID: 6320372113586694660}
-  - component: {fileID: 8238122030104796625}
+  - component: {fileID: 7775907447655782205}
   m_Layer: 0
   m_Name: Dolly
   m_TagString: Untagged
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_PositionUnits: 1
   m_Speed: 8
   m_Position: 0
---- !u!114 &8238122030104796625
+--- !u!114 &7775907447655782205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5016481084148819596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b54ff19b6593eb4f9522f9eaa86560c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cb5710bd81a4b5498d641c728d95b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5033715422835929546
@@ -1218,6 +1218,7 @@ GameObject:
   - component: {fileID: 8590857096651780595}
   - component: {fileID: 8590857096657843153}
   - component: {fileID: 8590857096651324969}
+  - component: {fileID: 3906479633318486446}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -1291,6 +1292,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3906479633318486446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590857096651943379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b54ff19b6593eb4f9522f9eaa86560c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8590857096651943381
 GameObject:
   m_ObjectHideFlags: 0

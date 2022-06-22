@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.IO;
 
 public class ToResult : MonoBehaviour
 {
@@ -9,9 +11,23 @@ public class ToResult : MonoBehaviour
     public int lapCount;
     public int maxLap = 3;
 
+    // Log—p•Ï”
+    public static bool finish = false;
+
     // Logo—Í—p•Ï”
     // score
     // bulletCount
+
+    public void Start()
+    {
+        //DateTime now = DateTime.Now;
+        //fi = new FileInfo(Application.dataPath + "/" + "LogData_" + now.Year.ToString() + "_" + now.Month.ToString() + "_" + now.Day.ToString() + "__" + now.Hour.ToString() + "_" + now.Minute.ToString() + ".csv");
+    }
+
+    public void FixedUpdate()
+    {
+
+    }
 
     public void OnClickButton()
     {
@@ -27,6 +43,8 @@ public class ToResult : MonoBehaviour
 
             if (lapCount >= maxLap)
             {
+                finish = true;
+
                 SceneManager.LoadScene("Result");
             }
         }
