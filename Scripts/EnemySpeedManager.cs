@@ -9,12 +9,14 @@ public class EnemySpeedManager : MonoBehaviour
     public float waitTime;
 
     GameObject enemy;
+
     Cinemachine.CinemachineDollyCart script;
 
     void Start()
     {
         enemy = GameObject.Find("Enemy");
         script = enemy.GetComponent<Cinemachine.CinemachineDollyCart>();
+        
     }
 
     void Update()
