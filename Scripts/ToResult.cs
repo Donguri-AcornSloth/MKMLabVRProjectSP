@@ -18,6 +18,8 @@ public class ToResult : MonoBehaviour
     // score
     // bulletCount
 
+    public SaveLog saveLog;
+
     public void Start()
     {
         //DateTime now = DateTime.Now;
