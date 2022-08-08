@@ -8,7 +8,8 @@ using System.Text;
 public class SaveLog : MonoBehaviour
 {
     // CSVópïœêî
-    private StreamWriter sw;
+    public static StreamWriter sw;
+    DateTime dt;
 
     // éûä‘ópïœêî
     public static float nowTime = 0f;
@@ -16,25 +17,26 @@ public class SaveLog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sw = new StreamWriter(@"SaveData.csv", false, Encoding.GetEncoding("Shift_JIS"));
-        string[] s1 = { "Time", "Score", "BulletCount", "Movement.x", "Movement.y", "Movement.z", "Rotation.x", "Rotation.y", "Rotation.z" };
-        string s2 = string.Join(",", s1);
-        sw.WriteLine(s2);
+        dt = DateTime.Now;
+        //sw = new StreamWriter("LogData_" + dt.Year.ToString() + "_" + dt.Month.ToString() + "_" + dt.Day.ToString() + "_" + dt.Hour.ToString() + "_" + dt.Minute.ToString() + ".csv", false, Encoding.GetEncoding("Shift_JIS"));
+        //string[] s1 = { "Time", "Score", "BulletCount", "Movement.x", "Movement.y", "Movement.z", "Rotation.x", "Rotation.y", "Rotation.z" };
+        //string s2 = string.Join(",", s1);
+        //sw.WriteLine(s2);
     }
 
     // Update is called once per frame
     void Update()
     {
         nowTime += Time.deltaTime;
-        SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
+        SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation, sw);
 
         if (ToResult.finish == true)
         {
-            CSVClose();
+            //CSVClose();
         }
     }
 
-    public void SaveCSVLog(int score, int bulletCount, Vector3 movement, Vector3 rotation)
+    public void SaveCSVLog(int score, int bulletCount, Vector3 movement, Vector3 rotation, StreamWriter sw)
     {
         int minute = (int)nowTime / 60;
         int second = (int)nowTime % 60;
@@ -44,7 +46,7 @@ public class SaveLog : MonoBehaviour
         sw.WriteLine(s2);
     }
 
-    public void CSVClose()
+    public void CSVClose(StreamWriter sw)
     {
         sw.Close();
     }

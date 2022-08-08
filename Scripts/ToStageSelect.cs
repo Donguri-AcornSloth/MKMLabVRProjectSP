@@ -24,6 +24,9 @@ public class ToStageSelect : MonoBehaviour
         LogData.movement = new Vector3(0, 0, 0);
         LogData.rotation = new Vector3(0, 0, 0);
         SaveLog.nowTime = 0;
+        ToResult.finish = false;
+
+        SaveLog.sw.Close();
 
         //ステージ読み込み
         SceneManager.LoadScene("StageSelection");

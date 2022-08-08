@@ -76,4 +76,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lapCount: 0
   maxLap: 3
-  SaveLog: {fileID: 7775907447655782205, guid: 02a9ca82f812de948b6aa5801a04c267, type: 3}
+  saveLog: {fileID: 7775907447655782205, guid: 02a9ca82f812de948b6aa5801a04c267, type: 3}

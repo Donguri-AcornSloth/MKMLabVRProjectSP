@@ -146,6 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d9d7cf5b214de4caeab88f89c087fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lapCount: 0
+  maxLap: 3
+  saveLog: {fileID: 7775907447655782205, guid: 02a9ca82f812de948b6aa5801a04c267, type: 3}
 --- !u!1 &8438642968650744004
 GameObject:
   m_ObjectHideFlags: 0
