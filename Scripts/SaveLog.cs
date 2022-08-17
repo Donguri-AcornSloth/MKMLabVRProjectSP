@@ -8,7 +8,7 @@ using System.Text;
 public class SaveLog : MonoBehaviour
 {
     // CSVópïœêî
-    private StreamWriter sw;
+    public static StreamWriter sw;
 
     // éûä‘ópïœêî
     public static float nowTime = 0f;
@@ -16,7 +16,8 @@ public class SaveLog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sw = new StreamWriter(@"SaveData.csv", false, Encoding.GetEncoding("Shift_JIS"));
+        DateTime now = DateTime.Now;
+        sw = new StreamWriter(@"SaveData_" + now.Year.ToString() + "_" + now.Month.ToString() + "_" + now.Day.ToString() + "_" + now.Hour.ToString() + "_" + now.Minute.ToString() + ".csv", false, Encoding.GetEncoding("Shift_JIS"));
         string[] s1 = { "Time", "Score", "BulletCount", "Movement.x", "Movement.y", "Movement.z", "Rotation.x", "Rotation.y", "Rotation.z" };
         string s2 = string.Join(",", s1);
         sw.WriteLine(s2);
@@ -27,11 +28,6 @@ public class SaveLog : MonoBehaviour
     {
         nowTime += Time.deltaTime;
         SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
-
-        if (ToResult.finish == true)
-        {
-            CSVClose();
-        }
     }
 
     public void SaveCSVLog(int score, int bulletCount, Vector3 movement, Vector3 rotation)
@@ -42,10 +38,5 @@ public class SaveLog : MonoBehaviour
         string[] s1 = { timeText, score.ToString(), bulletCount.ToString(), movement.x.ToString("0000"), movement.y.ToString("0000"), movement.z.ToString("0000"), rotation.x.ToString("0000"), rotation.y.ToString("0000"), rotation.z.ToString("0000") };
         string s2 = string.Join(",", s1);
         sw.WriteLine(s2);
-    }
-
-    public void CSVClose()
-    {
-        sw.Close();
     }
 }
