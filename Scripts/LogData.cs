@@ -23,6 +23,30 @@ public class LogData : MonoBehaviour
     {
         movement = this.gameObject.transform.position - pmovement;
         rotation = this.gameObject.transform.rotation.eulerAngles - protation;
+        if (rotation.x > 180)
+        {
+            rotation.x = rotation.x - 360;
+        }
+        else if (rotation.x < -180)
+        {
+            rotation.x = rotation.x + 360;
+        }
+        if (rotation.y > 180)
+        {
+            rotation.y = rotation.y - 360;
+        }
+        else if (rotation.y < -180)
+        {
+            rotation.y = rotation.y + 360;
+        }
+        if (rotation.z > 180)
+        {
+            rotation.z = rotation.z - 360;
+        }
+        else if (rotation.z < -180)
+        {
+            rotation.z = rotation.z + 360;
+        }
 
         pmovement = this.gameObject.transform.position;
         protation = this.gameObject.transform.rotation.eulerAngles;

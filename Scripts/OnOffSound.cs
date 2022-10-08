@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnOffSound : MonoBehaviour
 {
-    public static bool isSound = false;
+    public static bool isSound = true;
 
     public AudioClip OnOffSoundSE;
     private AudioSource AudioSource;
