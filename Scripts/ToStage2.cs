@@ -26,6 +26,6 @@ public class ToStage2 : MonoBehaviour
 
         // 音・パーティクルを再生
         AudioSource.PlayOneShot(ToStage2SE);
-        SceneManager.LoadScene("Stage2_test");
+        SceneManager.LoadScene("ma_Stage2");
     }
 }
