@@ -26,8 +26,6 @@ public class ToStageSelect : MonoBehaviour
         SaveLog.nowTime = 0;
         ToResult.finish = false;
 
-        SaveLog.sw.Close();
-
         //ステージ読み込み
         SceneManager.LoadScene("StageSelection");
     }
