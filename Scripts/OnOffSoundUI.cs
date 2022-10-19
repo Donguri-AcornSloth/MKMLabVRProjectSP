@@ -14,6 +14,6 @@ public class OnOffSoundUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "åªç›ÇÃê›íËÅF" + OnOffSound.isSound;
+        GetComponent<Text>().text = "?????" + OnOffSound.isSound;
     }
 }
