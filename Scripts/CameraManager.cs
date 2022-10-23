@@ -25,16 +25,16 @@ public class CameraManager : MonoBehaviour
         {
             if (other.gameObject.CompareTag("TPSTriggerIn"))
             {
-                player.transform.localPosition = new Vector3(0, 3, 3f);
-                player.transform.localEulerAngles = new Vector3(100, 0, 0);
-                player.gameObject.transform.parent = rootObject.gameObject.transform;
+                player.transform.localPosition = new Vector3(0f, 4f, 1.8f);
+                //player.transform.localEulerAngles = new Vector3(100, 0, 0);
+                //player.gameObject.transform.parent = rootObject.gameObject.transform;
             }
 
             if (other.gameObject.CompareTag("TPSTriggerOut"))
             {
-                player.gameObject.transform.parent = this.gameObject.transform;
-                player.transform.localPosition = new Vector3(0, -0.75f, 1.8f);
-                player.transform.localEulerAngles = new Vector3(90, 0, 0);
+                //player.gameObject.transform.parent = this.gameObject.transform;
+                player.transform.localPosition = new Vector3(0f, -0.35f, 1.8f);
+                //player.transform.localEulerAngles = new Vector3(90, 0, 0);
             }
         }
     }

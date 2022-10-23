@@ -27,7 +27,7 @@ public class CartAnimation : MonoBehaviour
             anim.SetBool("shakeBool", true);
         }
 
-        if (other.gameObject.tag == "stopShake" && OnOffShake.isShake == false)
+        if (other.gameObject.tag == "stopShake" && OnOffShake.isShake == true)
         {
             //Debug.Log(script.m_Speed);
             anim.SetBool("shakeBool", false);
@@ -38,7 +38,5 @@ public class CartAnimation : MonoBehaviour
             Debug.Log("a");
             anim.SetTrigger("rotateTrigger");
         }
-
-      
     }
 }
