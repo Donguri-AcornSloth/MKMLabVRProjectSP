@@ -13,9 +13,12 @@ public class SaveLog : MonoBehaviour
     // éûä‘ópïœêî
     public static float nowTime = 0f;
 
+    public static bool update = true;
+
     // Start is called before the first frame update
     void Start()
     {
+        update = true;
         DateTime now = DateTime.Now;
         sw = new StreamWriter(@"SaveData_" + now.Year.ToString() + "_" + now.Month.ToString() + "_" + now.Day.ToString() + "_" + now.Hour.ToString() + "_" + now.Minute.ToString() + ".csv", false, Encoding.GetEncoding("Shift_JIS"));
         string[] s1 = { "Time", "Score", "BulletCount", "Movement.x", "Movement.y", "Movement.z", "Rotation.x", "Rotation.y", "Rotation.z" };
@@ -26,8 +29,11 @@ public class SaveLog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nowTime += Time.deltaTime;
-        SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
+        if(update == true)
+        {
+            nowTime += Time.deltaTime;
+            SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
+        }
     }
 
     public void SaveCSVLog(int score, int bulletCount, Vector3 movement, Vector3 rotation)

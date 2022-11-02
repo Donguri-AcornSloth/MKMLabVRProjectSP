@@ -46,6 +46,7 @@ public class ToResult : MonoBehaviour
             if (lapCount >= maxLap)
             {
                 finish = true;
+                SaveLog.update = false;
                 SaveLog.sw.Close();
 
                 SceneManager.LoadScene("Result");
