@@ -14,6 +14,6 @@ public class OnOffShakeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "åªç›ÇÃê›íËÅF" + OnOffShake.isShake;
+        GetComponent<Text>().text = "Now: " + OnOffShake.isShake;
     }
 }

@@ -14,6 +14,6 @@ public class OnOffTPSUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "åªç›ÇÃê›íËÅF" + OnOffTPS.isTPS;
+        GetComponent<Text>().text = "Now: " + OnOffTPS.isTPS;
     }
 }
