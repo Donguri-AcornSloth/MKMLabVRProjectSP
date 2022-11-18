@@ -11,8 +11,6 @@ public class ToStage1 : MonoBehaviour
     public AudioClip ToStage1SE;
     private AudioSource AudioSource;
 
-    DateTime dt;
-
     void Start()
     {
         AudioSource = this.gameObject.GetComponent<AudioSource>();
