@@ -34,6 +34,11 @@ public class SaveLog : MonoBehaviour
             nowTime += Time.deltaTime;
             SaveCSVLog(LogData.score, LogData.bulletCount, LogData.movement, LogData.rotation);
         }
+
+        if(ToResult.finish == true)
+        {
+            sw.Close();
+        }
     }
 
     public void SaveCSVLog(int score, int bulletCount, Vector3 movement, Vector3 rotation)

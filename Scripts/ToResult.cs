@@ -47,7 +47,7 @@ public class ToResult : MonoBehaviour
             {
                 finish = true;
                 SaveLog.update = false;
-                SaveLog.sw.Close();
+                //SaveLog.sw.Close();
 
                 SceneManager.LoadScene("Result");
             }
