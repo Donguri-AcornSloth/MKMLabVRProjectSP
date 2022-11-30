@@ -13,6 +13,14 @@ public class ToStageSelect : MonoBehaviour
         AudioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnClickButton();
+        }
+    }
+
     public void OnClickButton()
     {
         //音・パーティクルを再生
