@@ -54,10 +54,10 @@ public class TargetManager : MonoBehaviour
             //当たった回数を追加
             TriggerCounter += 1;
             //当たり判定とレンダラーを無効化
-            this.gameObject.GetComponent<Collider>().enabled = false;
+            /*this.gameObject.GetComponent<Collider>().enabled = false;
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             otherObj.GetComponent<Collider>().enabled = false;
-            otherObj.GetComponent<Collider>().enabled = false;
+            otherObj.GetComponent<Collider>().enabled = false;*/
 
             //音・パーティクルを再生
             if (OnOffSound.isSound)
