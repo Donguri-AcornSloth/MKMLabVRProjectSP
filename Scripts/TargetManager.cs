@@ -54,6 +54,8 @@ public class TargetManager : MonoBehaviour
             if(TriggerCounter >= hitNum)
             {
                 StartCoroutine(Control(disappearTime, appearTime));
+
+                TriggerCounter = 0;
             }
 
             // 得点を追加
@@ -67,12 +69,18 @@ public class TargetManager : MonoBehaviour
 
         //当たり判定とレンダラーを無効化
         this.gameObject.GetComponent<Collider>().enabled = false;
-        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
 
         yield return new WaitForSeconds(appearTime);
 
         //当たり判定とレンダラーを有効化
         this.gameObject.GetComponent<Collider>().enabled = true;
-        this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 }
