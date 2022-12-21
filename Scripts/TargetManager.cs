@@ -10,9 +10,12 @@ public class TargetManager : MonoBehaviour
     public AudioSource Audio;
     public ParticleSystem Particle1;
     public ParticleSystem particle2;
-    public GameObject otherObj;
-    public int Timer;
-    public int DestroyTime;
+
+    //コルーチン用変数
+    public float disappearTime = 1;
+    public float appearTime = 3;
+    public int hitNum = 1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,24 +25,9 @@ public class TargetManager : MonoBehaviour
         Audio = this.gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void fixedUpdate()
     {
-        //当たった後にタイマーを起動
-        if(TriggerCounter>=1)
-        {
-            Timer += 1;
-        }
-        //指定秒後に削除
-        if(Timer>=DestroyTime*50)
-        {
-            Destroy(gameObject);
-            Destroy(otherObj.gameObject);
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,15 +37,8 @@ public class TargetManager : MonoBehaviour
 
         if (other.gameObject.CompareTag("Bullet"))
         {
-            //当たったオブジェクトの情報を取得
-            otherObj = other.gameObject;
             //当たった回数を追加
             TriggerCounter += 1;
-            //当たり判定とレンダラーを無効化
-            /*this.gameObject.GetComponent<Collider>().enabled = false;
-            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            otherObj.GetComponent<Collider>().enabled = false;
-            otherObj.GetComponent<Collider>().enabled = false;*/
 
             //音・パーティクルを再生
             if (OnOffSound.isSound)
@@ -70,12 +51,28 @@ public class TargetManager : MonoBehaviour
             newParticle2 = Instantiate(Particle1.gameObject);
             newParticle2.GetComponent<ParticleSystem>().Play();
 
-            // TargetとBulletを両方消去
-            /*Destroy(gameObject);
-            Destroy(other.gameObject);*/
+            if(TriggerCounter >= hitNum)
+            {
+                StartCoroutine(Control(disappearTime, appearTime));
+            }
 
             // 得点を追加
             scoreManager.AddScore();
         }
+    }
+
+    private IEnumerator Control(float disappearTime, float appearTime)
+    {
+        yield return new WaitForSeconds(disappearTime);
+
+        //当たり判定とレンダラーを無効化
+        this.gameObject.GetComponent<Collider>().enabled = false;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(appearTime);
+
+        //当たり判定とレンダラーを有効化
+        this.gameObject.GetComponent<Collider>().enabled = true;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 }
