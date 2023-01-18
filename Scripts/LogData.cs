@@ -19,10 +19,11 @@ public class LogData : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        movement = this.gameObject.transform.position - pmovement;
-        rotation = this.gameObject.transform.rotation.eulerAngles - protation;
+
+        movement = this.gameObject.transform.localPosition - pmovement;
+        rotation = this.gameObject.transform.localRotation.eulerAngles - protation;
         if (rotation.x > 180)
         {
             rotation.x = rotation.x - 360;
@@ -48,7 +49,7 @@ public class LogData : MonoBehaviour
             rotation.z = rotation.z + 360;
         }
 
-        pmovement = this.gameObject.transform.position;
-        protation = this.gameObject.transform.rotation.eulerAngles;
+        pmovement = this.gameObject.transform.localPosition;
+        protation = this.gameObject.transform.localRotation.eulerAngles;
     }
 }
